@@ -1,7 +1,7 @@
 import { Alert, StyleSheet, TextInput, View } from 'react-native';
 import PrimaryButton from '../components/ui/PrimaryButton';
 import { useState } from 'react';
-import Color from '../constans/Color';
+import Color from '../constans/color';
 
 function StartGameScreen({ onPickedNumber }) {
     const [enteredNumber, setEnteredNumber] = useState('');
