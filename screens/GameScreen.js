@@ -3,6 +3,8 @@ import Title from '../components/ui/Title';
 import { useEffect, useState } from 'react';
 import NumberContainer from '../components/game/NumberContainer';
 import PrimaryButton from '../components/ui/PrimaryButton';
+import Card from '../components/ui/Card';
+import InstructionText from '../components/ui/InstructionText';
 
 let minBoundary = 1;
 let maxBoundary = 100;
@@ -52,13 +54,13 @@ function GameScreen({ usrNumber, onGameOver }) {
         <View style={styles.screen}>
             <Title>Opponent's Guess</Title>
             <NumberContainer>{currentGuess}</NumberContainer>
-            <View>
-                <Text>Higher or Lower?</Text>
+            <Card>
+                <InstructionText>Higher or Lower?</InstructionText>
                 <View>
                     <PrimaryButton onPress={nextGuessHandler.bind(this, 'lower')}>-</PrimaryButton>
                     <PrimaryButton onPress={nextGuessHandler.bind(this, 'greater')}>+</PrimaryButton>
                 </View>
-            </View>
+            </Card>
             {/* <View>Log Rounds</View> */}
         </View>
     );
